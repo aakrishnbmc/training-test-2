@@ -25,17 +25,17 @@ jobs:
           node-version: 20
  
       - name: Install dependencies
-        working-directory: test2
+        working-directory: training-test-2
         run: npm ci
  
       - name: Build website
-        working-directory: test2
+        working-directory: training-test-2
         run: npm run build
  
       - name: Upload build
         uses: actions/upload-pages-artifact@v4
         with:
-          path: test2/build
+          path: training-test-2/build
  
   deploy:
     name: Deploy to GitHub Pages
